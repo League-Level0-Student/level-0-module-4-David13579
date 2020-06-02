@@ -13,24 +13,30 @@ void setup() {
   image(waldo, 0, 0);
 
   
-    //doh = minim.loadSample("homer-doh.wav"); 
-    //woohoo = minim.loadSample("homer-woohoo.wav"); 
+    //doh = minim.loadSample("doh.wav"); 
+    //woohoo = minim.loadSample("woohoo.wav"); 
 }
 
 void draw() {
       // Use this print statement to find out the coordinates of Waldo when you press the mouse
       // If the mouse is on Waldo, print “Waldo found!”
-      if(mousePressed== true && 798<mouseX && mouseX<811 && 66<mouseY && mouseY<90){
+      if(mousePressed== true && 880<mouseX && mouseX<893 && 224<mouseY && mouseY<280){
         print("Waldo found!");
+        playWoohoo();
       }
+
 /**********  Now to add the sounds. You will need to uncomment all the code and import the Minim library ********/
 
       // If Waldo is found, also use a method below to play “Woohoo”
       // Change the name of the sound file if you need to 
-      
+      if(mousePressed== true && 880<mouseX && mouseX<893 && 224<mouseY && mouseY<280){
+        playWoohoo();
+      }
       // If the mouse is pressed and they’re not on Waldo, play “Doh”
       // Change the name of the sound file if you need to 
-      
+        else if(mousePressed== true){
+        playDoh();
+      }
 }
 /*********************  Use the methods below, DON'T CHANGE THE CODE *********************/
 
